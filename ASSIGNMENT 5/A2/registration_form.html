@@ -1,0 +1,76 @@
+<!--Dinesh K Lohar 2030-->
+<!--B) Validating the various Form Elements(Registration Form)-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Registration Form</title>
+  <style media="screen">
+    p {
+      font-size: 26px;
+      font-family: Cambria;
+      font-weight: bold;
+    }
+
+    body {
+      background-image: url("bg2.jpg");
+      background-size: cover;
+    }
+  </style>
+
+  <script type="text/javascript">
+    function validation() {
+      var str = document.register;
+
+      var r1 = str.email.value.indexOf('@'); //for email requirement 1
+      var r2 = str.email.value.indexOf('.'); //for email requirement 2
+
+      if (str.name.value.length < 4) {
+        alert("Enter your Full Name!");
+        str.name.focus();
+      } else if (isNaN(str.name.value) == false) {
+        alert("Enter a valid Name!");
+        str.name.select();
+      } else if (r1 <= 0 || r2 <= 0 || r2 - r1 <= 2) {
+        alert("Enter a valid Email Address!");
+        str.email.focus();
+      } else if ((isNaN(str.contact.value == true)) || (str.contact.value.length != 10)) {
+        alert("Enter a valid Contact Number!");
+        str.contact.slect();
+      } else if (str.location.value.length <= 0) {
+        alert("Enter your Location!");
+        str.location.select();
+      } else if ((isNaN(str.pin.value == true)) || (str.pin.value.length != 6)) {
+        alert("Enter a valid 6 digits Pincode!");
+        str.pin.select();
+      } else {
+        document.getElementById("output").innerHTML = "The Form is Submitted Successfully. I hope you'll enjoy the classes.";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <center>
+    <h1>REGISTER YOURSELF FOR WEB PROGRAMMING CLASSES</h1>
+    <h3>Organized By Madam Reshma Desai</h3><br><br>
+    <h3>Learner's Detail</h3>
+    <form name="register">
+      <label>Name : </label>
+      <input type="text" name="name" placeholder="Enter your Name" size="50"><br><br>
+      <label>Email ID : </label>
+      <input type="text" name="email" placeholder="Enter your Email ID" size="47"><br><br>
+      <label>Contact No. : </label>
+      <input type="text" name="contact" placeholder="Enter your Contact Number" size="45"><br><br>
+      <label>Location : </label>
+      <input type="text" name="location" placeholder="Enter your Location" size="48"><br><br>
+      <label>Pincode No. : </label>
+      <input type="text" name="pin" placeholder="Enter your Pincode/Zipcode" size="45"><br><br>
+    </form>
+    <button onclick="validation()">SUBMIT</button>
+    <p id="output"></p>
+  </center>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!--Dinesh K Lohar 2030-->
+<!--B).2 History.-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Objects</title>
+  <style>
+    p {
+      font-size: 28px;
+      font-family: Cambria;
+      padding: 20px;
+    }
+
+    body {
+      background-image: url("bg1.jpg");
+      background-size: cover;
+    }
+
+    .button {
+      border: none;
+      color: white;
+      padding: 20px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 26px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    .button1 {
+      background-color: white;
+      color: black;
+      border: 3px solid #080096;
+    }
+
+    .button1:hover {
+      background-color: #ffb300;
+      color: black;
+    }
+  </style>
+
+  <script type="text/javascript">
+    function frwd() {
+      window.history.forward();
+    }
+
+    function go() {
+      var ask = prompt("Enter a URL from History");
+      window.history.go(ask);
+    }
+
+    function bk() {
+      window.history.back();
+    }
+
+    function len() {
+      var x = history.length;
+
+      document.getElementById("op").innerHTML = " * Number of URLS in History List: " + x;
+    }
+  </script>
+</head>
+
+<body>
+  <center>
+    <h1>HISTORY OBJECT</h1>
+    <br><br><br>
+    <button class="button button1" type="button" onclick="bk()">BACK</button>
+    <button class="button button1" type="button" onclick="go()">GO</button>
+    <button class="button button1" type="button" onclick="frwd()">FORWARD</button>
+    <button class="button button1" type="button" onclick="len()">HISTORY</button>
+    <br><br>
+  </center>
+  <p id="op">The history object contains the URLs visited by the user (within a browser window).
+
+    The history object is part of the window object and is accessed through the window.history property.</p>
+</body>
+
+</html>

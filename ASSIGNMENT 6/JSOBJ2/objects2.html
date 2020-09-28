@@ -1,0 +1,85 @@
+<!--Dinesh K Lohar 2030-->
+<!--B)Demonstrating different JavaScript Objects such as Window, History, Location, Document, Navigator.-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Objects</title>
+  <style>
+    p {
+      font-size: 28px;
+      font-family: Cambria;
+      padding: 20px;
+    }
+
+    body {
+      background-image: url("bg1.jpg");
+      background-size: cover;
+    }
+
+    .button {
+      border: none;
+      color: white;
+      padding: 20px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 26px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    .button1 {
+      background-color: white;
+      color: black;
+      border: 3px solid #080096;
+    }
+
+    .button1:hover {
+      background-color: #ffb300;
+      color: black;
+    }
+  </style>
+
+  <script type="text/javascript">
+    function navigator1() {
+      var x = " * Java Enabled: " + navigator.javaEnabled();
+      var browser = " * Browser Name: " + navigator.appName;
+      var browser_version = navigator.appVersion;
+      var version = " * Browser Version: " + parseFloat(browser_version);
+      var cookies = " * Navigator Cookies Enabled: " + navigator.cookieEnabled;
+      var out = x + "<br />" + browser + "<br />" + version + "<br />" + cookies;
+
+      document.getElementById("op").innerHTML = "The navigator object contains information about the browser.<br /><br />" + out;
+    }
+
+    function location1() {
+      var url = "The full URL of this page is: " + window.location.href;
+      var hostname1 = "Page hostname is: " + window.location.hostname;
+      var path = "Page path is: " + window.location.pathname;
+      var protocol1 = "The page protocol is: " + window.location.protocol;
+      var opt = url + "<br />" + hostname1 + "<br />" + path + "<br />" + protocol1;
+
+      document.getElementById("op").innerHTML = "The location object contains information about the current URL.<br /><br />" + opt;
+    }
+  </script>
+</head>
+
+<body>
+  <center>
+    <h1>B) DEMONSTRATION OF SOME JAVASCRIPT OBJECTS</h1>
+    <br><br><br>
+    <a href="window.html"><button class="button button1" type="button">Window Object</button></a>
+    <a href="history.html"><button class="button button1" type="button">History Object</button></a>
+    <button class="button button1" type="button" onclick="navigator1()">Navigator Object</button>
+    <button class="button button1" type="button" onclick="location1()">Location Object</button>
+    <a href="document.html"><button class="button button1" type="button">Document Object</button></a>
+    <br><br>
+  </center>
+  <p id="op">JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name (or key) and a value. A property's value can be a function, in which case the property is
+    known as a method. In addition to objects that are predefined in the browser, you can define your own objects. This chapter describes how to use objects, properties, functions, and methods, and how to create your own objects.</p>
+</body>
+
+</html>

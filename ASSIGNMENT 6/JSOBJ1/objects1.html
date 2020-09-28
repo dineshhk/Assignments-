@@ -1,0 +1,118 @@
+<!--Dinesh K Lohar 2030-->
+<!--A)Demonstrating different JavaScript Objects such as String, Regular Expression, Math, Date.-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Objects</title>
+  <style>
+    p {
+      font-size: 28px;
+      font-family: Cambria;
+      padding: 20px;
+    }
+
+    body {
+      background-image: url("bg2.jpg");
+      background-size: cover;
+    }
+
+    .button {
+      border: none;
+      color: white;
+      padding: 20px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 26px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    .button1 {
+      background-color: white;
+      color: black;
+      border: 3px solid #080096;
+    }
+
+    .button1:hover {
+      background-color: #ffb300;
+      color: black;
+    }
+  </style>
+
+  <script type="text/javascript">
+    //String Object
+    function stringObj() {
+      var string1 = "Web Development";
+      var string2 = "Covid-19 Pandemic 2020 is a Curse.";
+      var string3 = "Dinesh K Lohar";
+      var pos = "2020";
+      var length = " * A Length of a String '" + string1 + "' : " + string1.length;
+      var position = " * The Position of a String '" + pos + "' in a String '" + string2 + "' : " + string2.indexOf(pos);
+      var upper = " * A Sring '" + string3 + "' in UpperCase : " + string3.toUpperCase();
+      var lower = " * A Sring '" + string3 + "' in LowerCase : " + string3.toLowerCase();
+      var char = " * A Sring '" + string3 + "' have a Character at Index 7 : " + string3.charAt(7);
+
+      document.getElementById("op").innerHTML = "The String object lets you work with a series of characters; it wraps Javascript's string primitive data type with a number of helper methods.<br /><br />" + length + "<br />" + position + "<br />" +
+        upper + "<br />" + lower + "<br />" + char;
+    }
+
+    //Regular Expression
+    function regxObj() {
+      var string = "Best of Luck for Exams, Do well.";
+      var pattern = /Luck/i;
+      var result = " * Searching 'Luck' in a String '" + string + "' : ";
+      var res = " ";
+
+      if (string.match(pattern) == "Luck") {
+        res = " Yes, 'Luck' is present in the String.";
+      } else {
+        res = " No, 'Luck' is not present in the String.";
+      }
+      document.getElementById("op").innerHTML = "A regular expression is an object that describes a pattern of characters.<br /><br />" + result + res;
+    }
+
+    //Math Object
+    function mathObj() {
+      var pi = " * Value of Pi : " + Math.PI;
+      var sin = " * Value of Sin(60) : " + Math.sin(60);
+      var cos = " * Value of Cos(80) : " + Math.cos(80);
+      var tan = " * Value of Tan(30) : " + Math.tan(30);
+      var ceil = " * The Ceiling Number of 12.5 : " + Math.ceil(12.5);
+      var floor = " * The Flooring Number of 36.5 : " + Math.floor(36.5);
+      var min = " * The Smallest Number in (41, 50, 25, 78) : " + Math.min(41, 50, 25, 78);
+      var max = " * The Largest Number in (41, 50, 25, 78) : " + Math.max(41, 50, 25, 78);
+      var power = " * Value of 2 to the Power 4 : " + Math.pow(2, 4);
+      var square = " * The Square Root of 150 : " + Math.sqrt(150);
+      var abs = " * The abs of -54 : " + Math.abs(-54);
+      var result = pi + "<br />" + sin + "<br />" + cos + "<br />" + tan + "<br />" + ceil + "<br />" + floor + "<br />" + min + "<br />" + max + "<br />" + power + "<br />" + square + "<br />" + abs;
+
+      document.getElementById("op").innerHTML = "A regular expression is an object that describes a pattern of characters.<br /><br />" + result;
+    }
+
+    //Date Object
+    function dateObj() {
+      var date = new Date();
+      var result = " * Current Date & Time is "+date;
+      document.getElementById("op").innerHTML = "The Date object is a datatype built into the JavaScript language. Date objects are created with the new Date( ) as shown below.<br /><br />"+result;
+    }
+  </script>
+</head>
+
+<body>
+  <center>
+    <h1>A) DEMONSTRATION OF SOME JAVASCRIPT OBJECTS</h1>
+    <br><br><br>
+    <button class="button button1" type="button" onclick="stringObj()">String Object</button>
+    <button class="button button1" type="button" onclick="regxObj()">RegEx Object</button>
+    <button class="button button1" type="button" onclick="mathObj()">Math Object</button>
+    <button class="button button1" type="button" onclick="dateObj()">Date Object</button>
+    <br><br>
+  </center>
+  <p id="op">JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a name (or key) and a value. A property's value can be a function, in which case the property is known as a method. In addition to objects that are predefined in the browser, you can define your own objects. This chapter describes how to use objects, properties, functions, and methods, and how to create your own objects.</p>
+</body>
+
+</html>

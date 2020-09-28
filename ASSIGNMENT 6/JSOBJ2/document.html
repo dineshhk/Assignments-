@@ -1,0 +1,85 @@
+<!--Dinesh K Lohar 2030-->
+<!--B).5 Document-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Objects</title>
+  <style>
+    div {
+      font-size: 28px;
+      font-family: Cambria;
+      padding: 20px;
+    }
+
+    body {
+      background-image: url("bg1.jpg");
+      background-size: cover;
+    }
+
+    .button {
+      border: none;
+      color: white;
+      padding: 20px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 26px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+
+    .button1 {
+      background-color: white;
+      color: black;
+      border: 3px solid #080096;
+    }
+
+    .button1:hover {
+      background-color: #ffb300;
+      color: black;
+    }
+  </style>
+
+  <script type="text/javascript">
+    var myWindow;
+
+    function dom() {
+      var x = document.domain;
+      document.getElementById("msg").innerHTML = "The Domain of this document: <br />" + x;
+    }
+
+    function inpEn() {
+      var x = document.inputEncoding;
+      document.getElementById("msg").innerHTML = "This document is encoded by " + x;
+    }
+
+    function mod() {
+      var x = document.documentMode;
+      document.getElementById("msg").innerHTML = "This document is displayed in IE" + x + " mode";
+    }
+
+    function laMod() {
+      var x = document.lastModified;
+      document.getElementById("msg").innerHTML = "This document is Last Modified at " + x;
+    }
+  </script>
+</head>
+
+<body>
+  <center>
+    <h1>DOCUMENT OBJECT</h1>
+    <br><br><br>
+    <button class="button button1" onclick="dom()">Domain</button>
+    <button class="button button1" onclick="inpEn()">Input Encoding</button>
+    <button class="button button1" onclick="mod()">Mode</button>
+    <button class="button button1" onclick="laMod()">Last Modified</button>
+    <br><br>
+    <div id="msg">A Document object represents the HTML document that is displayed in that window. The Document object has various properties that refer to other objects which allow access to and modification of document content.</div>
+  </center>
+
+</body>
+
+</html>
